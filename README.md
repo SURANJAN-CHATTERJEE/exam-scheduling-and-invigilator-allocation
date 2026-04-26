@@ -47,10 +47,10 @@ The system follows a hybrid pipeline:
 
 The system uses structured CSV datasets:
 
-- Student data (program, semester, count)
-- Subject data (core/specialization)
-- Room data (capacity, layout)
-- Invigilator data (availability & preferences)
+- STUDENT DETAILS (PROGRAM, SEMESTER, DEPARTMENT, SPECIALISATION, STUDENT COUNT)
+- SUBJECT DETAILS (COURSE_NAME, COURSE_CODE, DEPARTMENT, SEMESTER, SPECIALISATION)
+- ROOM DETAILS (Building Number, Room Number, No. of Rows, No. of columns, Total Room Capacity)
+- INVIGILATOR DETAILS (EMP_NAME, PREFERED_SUBJECT_CODE)
 
 ---
 
@@ -81,6 +81,44 @@ The system uses structured CSV datasets:
 - Optimizes **room utilization**
 - Balances **faculty workload**
 - Fully automated pipeline
+
+---
+
+## Folder Structure
+
+Project/
+   |
+   |-----data/
+   |      |
+   |      |----STUDENT DETAILS.csv
+   |      |----SUBJECT DETAILS.csv
+   |      |----ROOM DETAILS.csv
+   |      |----INVIGILATOR DETAILS.csv
+   |
+   |-----models/gnn_model.pth
+   |
+   |-----output/
+   |      |
+   |      |----date_sheet/Date Sheet for Sem_x {Department}.pdf
+   |      |----invigilator/invigilator_duty.pdf
+   |      |----room_allotment/room_allotment_metrics.pdf
+   |      |----room_metrix/room_sitting_metrix.pdf
+   |      |----sitting_arrangement/sitting_arrangement.pdf
+   |      |----shap_feature_importence.png
+   |
+   |-----programs/
+   |      |
+   |      |----allocatorpy
+   |      |----csp_repair.py
+   |      |----csp_validator.py
+   |      |----data_loader.py
+   |      |----evaluator.py
+   |      |----gnn_model.py
+   |      |----output_generator.py
+   |      |----scheduler.py
+   |      |----shap_explainer.py
+   |
+   |----main.py
 
 ---
 
