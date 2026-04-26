@@ -84,42 +84,53 @@ The system uses structured CSV datasets:
 
 ---
 
-## Folder Structure
-'''text
+## Project Structure
+
+```text
 Project/
-   |
-   |-----data/
-   |      |
-   |      |----STUDENT DETAILS.csv
-   |      |----SUBJECT DETAILS.csv
-   |      |----ROOM DETAILS.csv
-   |      |----INVIGILATOR DETAILS.csv
-   |
-   |-----models/gnn_model.pth
-   |
-   |-----output/
-   |      |
-   |      |----date_sheet/Date Sheet for Sem_x {Department}.pdf
-   |      |----invigilator/invigilator_duty.pdf
-   |      |----room_allotment/room_allotment_metrics.pdf
-   |      |----room_metrix/room_sitting_metrix.pdf
-   |      |----sitting_arrangement/sitting_arrangement.pdf
-   |      |----shap_feature_importence.png
-   |
-   |-----programs/
-   |      |
-   |      |----allocatorpy
-   |      |----csp_repair.py
-   |      |----csp_validator.py
-   |      |----data_loader.py
-   |      |----evaluator.py
-   |      |----gnn_model.py
-   |      |----output_generator.py
-   |      |----scheduler.py
-   |      |----shap_explainer.py
-   |
-   |----main.py
-'''
+│
+├── data/
+│   ├── STUDENT_DETAILS.csv
+│   ├── SUBJECT_DETAILS.csv
+│   ├── ROOM_DETAILS.csv
+│   └── INVIGILATOR_DETAILS.csv
+│
+├── models/
+│   └── gnn_model.pth
+│
+├── output/
+│   ├── date_sheet/
+│   │   └── Date_Sheet_for_Sem_x_{Department}.pdf
+│   │
+│   ├── invigilator/
+│   │   └── invigilator_duty.pdf
+│   │
+│   ├── room_allotment/
+│   │   └── room_allotment_metrics.pdf
+│   │
+│   ├── room_matrix/
+│   │   └── room_sitting_matrix.pdf
+│   │
+│   ├── sitting_arrangement/
+│   │   └── sitting_arrangement.pdf
+│   │
+│   └── shap/
+│       └── shap_feature_importance.png
+│
+├── programs/
+│   ├── allocator.py
+│   ├── csp_repair.py
+│   ├── csp_validator.py
+│   ├── data_loader.py
+│   ├── evaluator.py
+│   ├── gnn_model.py
+│   ├── output_generator.py
+│   ├── scheduler.py
+│   └── shap_explainer.py
+│
+└── main.py
+```
+
 ---
 
 ## Note
